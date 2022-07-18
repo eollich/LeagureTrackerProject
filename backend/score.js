@@ -1,4 +1,5 @@
-//Performance score is calculated by totalScore / variableCount (the maximum points you can attain)
+//Performance score is calculated by totalScore (the player's score) / variableCount (the maximum points you can attain)
+//Performance score ranges from (0-10)
 
 let variableCount = 0;
 
@@ -53,4 +54,8 @@ const dmg = (playerDmg, totalDmg) => {
 
 const totalScore = () => {
     return kda + vision + cs + kp + dmg;
+}
+
+const performanceScore = () => {
+    return ((totalScore / variableCount) * 10).toFixed(2);
 }
